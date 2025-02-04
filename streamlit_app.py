@@ -49,5 +49,6 @@ if ingredients_list:
         
         st.success("Your Smoothie is ordered!",icon="✅")
 
-
+df_fr_all = requests.get("https://my.smoothiefroot.com/api/fruit/all")
+sf_df_all = st.dataframe(data=df_fr_all.json(),use_container_width=True)
 
